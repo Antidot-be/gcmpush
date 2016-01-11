@@ -197,7 +197,7 @@ public class GCMIntentService extends GCMBaseIntentService {
         launcherIntent.addCategory(Intent.CATEGORY_LAUNCHER);
 
         String title = (String) data.get("title");
-        String message = (String) data.get("message");
+        String message = (String) notificationSettings.get("alert");
         String ticker = (String) data.get("ticker");
 
         Log.i(LCAT, "Title: " + title);
